@@ -44,3 +44,38 @@ void deleteVector(vector *v) {
     reserve(v, 0);
 }
 
+bool isEmpty(const vector v) {
+    return v.size == 0;
+}
+
+bool isFull(const vector v) {
+    return v.size == v.capacity;
+}
+
+int getVectorValue(const vector v, const size_t i) {
+    return v.data[i];
+}
+
+bool isZeroVector(vector v) {
+    return v.capacity == 0;
+}
+
+void pushBack(vector *v, int x) {
+    if (isZeroVector(*v)) {
+        reserve(v, v->capacity + 1);
+        v->data[v->size++] = x;
+    } else if (isFull(*v)) {
+        reserve(v, v->capacity * 2);
+        v->data[v->size++] = x;
+    } else
+        v->data[v->size++] = x;
+}
+
+void popBack(vector *v) {
+    if (isEmpty(*v)) {
+        fprintf(stderr, "bad alloc");
+        exit(1);
+    }
+    reserve(v, v->capacity - 1);
+}
+
