@@ -57,4 +57,17 @@ int *back(vector *v);
 // возвращает указатель на нулевой элемент вектора v.
 int *front(vector *v);
 
+typedef struct vectorVoid {
+    int *data; // указатель на элементы вектора
+    size_t size; // размер вектора
+    size_t capacity;// вместимость вектора
+    size_t baseTypeSize;// размер базового типа:
+                        // например, если вектор хранит int -
+                        // то поле baseTypeSize = sizeof(int)
+                        // если вектор хранит float -
+                        // то поле baseTypeSize = sizeof(float)
+} vectorVoid;
+
+vectorVoid createVectorV(size_t n, size_t baseTypeSize);
+
 #endif

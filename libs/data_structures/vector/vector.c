@@ -95,3 +95,11 @@ int *front(vector *v) {
     return &v->data[0];
 }
 
+vectorVoid createVectorV(size_t n, size_t baseTypeSize) {
+    int *data = NULL;
+    if (n > 0) {
+        data = (int *) malloc(n * sizeof(int));
+        check_memory(data);
+    }
+    return (vectorVoid) {data, 0, n, baseTypeSize};
+}
