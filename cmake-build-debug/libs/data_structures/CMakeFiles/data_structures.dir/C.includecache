@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.c
+vector.h
+C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.h
+
+C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.h
+stdlib.h
+-
+stdio.h
+-
+malloc.h
+-
+stdbool.h
+-
+
