@@ -128,3 +128,19 @@ size_t binarySearchMoreOrEqual_(const int *a, size_t n, int x) {
     }
     return right;
 }
+
+void swap_(void *a, void *b, size_t n) {
+    if (a == b) {
+        return;
+    }
+    char *x = (char *)a;
+    char *y = (char *)b;
+
+    for (size_t i = 0; i < n; i++) {
+        *x ^= *y;
+        *y ^= *x;
+        *x ^= *y;
+        x++;
+        y++;
+    }
+}

@@ -65,4 +65,6 @@ int countIf_(const int *a, size_t n, int (*predicate )(int));
 // массива
 void deleteIf_(int *a, size_t *n, int (*deletePredicate )(int));
 
+void swap_(void *a, void *b, size_t n);
+
 #endif //UNTITLED6_ARRAY_H
