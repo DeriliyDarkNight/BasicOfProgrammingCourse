@@ -6,7 +6,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <string.h>
-# include "../../algorithms/array/array.h"
+#include "../../algorithms/array/array.h"
 #include "unordered_array_set.h"
 
 unordered_array_set unordered_array_set_create(size_t capacity) {
