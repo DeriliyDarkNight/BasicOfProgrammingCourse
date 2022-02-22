@@ -144,6 +144,33 @@ algorithms/fast:
 	cd /d C:\Users\DERILI~1\test\GITPRO~1\UNTITL~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+__/data_structures/matrix/tascs_lab5B.obj: __/data_structures/matrix/tascs_lab5B.c.obj
+
+.PHONY : __/data_structures/matrix/tascs_lab5B.obj
+
+# target to build an object file
+__/data_structures/matrix/tascs_lab5B.c.obj:
+	cd /d C:\Users\DERILI~1\test\GITPRO~1\UNTITL~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/tascs_lab5B.c.obj
+.PHONY : __/data_structures/matrix/tascs_lab5B.c.obj
+
+__/data_structures/matrix/tascs_lab5B.i: __/data_structures/matrix/tascs_lab5B.c.i
+
+.PHONY : __/data_structures/matrix/tascs_lab5B.i
+
+# target to preprocess a source file
+__/data_structures/matrix/tascs_lab5B.c.i:
+	cd /d C:\Users\DERILI~1\test\GITPRO~1\UNTITL~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/tascs_lab5B.c.i
+.PHONY : __/data_structures/matrix/tascs_lab5B.c.i
+
+__/data_structures/matrix/tascs_lab5B.s: __/data_structures/matrix/tascs_lab5B.c.s
+
+.PHONY : __/data_structures/matrix/tascs_lab5B.s
+
+# target to generate assembly for a file
+__/data_structures/matrix/tascs_lab5B.c.s:
+	cd /d C:\Users\DERILI~1\test\GITPRO~1\UNTITL~1\CMAKE-~1 && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/tascs_lab5B.c.s
+.PHONY : __/data_structures/matrix/tascs_lab5B.c.s
+
 algorithms.obj: algorithms.c.obj
 
 .PHONY : algorithms.obj
@@ -207,6 +234,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... algorithms
+	@echo ... __/data_structures/matrix/tascs_lab5B.obj
+	@echo ... __/data_structures/matrix/tascs_lab5B.i
+	@echo ... __/data_structures/matrix/tascs_lab5B.s
 	@echo ... algorithms.obj
 	@echo ... algorithms.i
 	@echo ... algorithms.s

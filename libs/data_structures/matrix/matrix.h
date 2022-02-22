@@ -87,4 +87,25 @@ matrix createMatrixFromArray(const int *a, size_t nRows, size_t nCols);
 // в динамической памяти, построенных из элементов массива a.
 matrix *createArrayOfMatrixFromArray(const int *values,size_t nMatrices, size_t nRows, size_t nCols);
 
+//выполняет сортировку выбором строк
+//матрицы m по неубыванию значения функции criteria применяемой для строк
+void selectionSortRowsMatrixByRowCriteria(matrix m, int (*criteria)(int *, int));
+
+//выполняет сортировку выбором столбцов
+//матрицы m по неубыванию значения функции criteria применяемой для строк
+void selectionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int));
+
+// заполняет массив array pos-ой колонной матрицы m;
+void getRowFromColumn(matrix m, size_t pos, int *array);
+
+//возвращает значение элемента матрицы m находящегося на позиции pos
+int getElementByPosition(matrix m, position pos);
+
+// возвращает произведение матрицы m1 на m2
+matrix mulMatrices(matrix m1, matrix m2);
+
+//выполняет сортировку выбором строк
+//матрицы m по неубыванию значения функции criteria применяемой для строк
+void selectionSortRowsMatrixByRowCriteriaF(matrix m, float (*criteria)(int *, int));
+
 #endif //MAIN_C_MATRIX_H

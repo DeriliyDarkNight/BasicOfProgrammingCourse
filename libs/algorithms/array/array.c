@@ -2,9 +2,9 @@
 // Created by DeriliyDarkNight on 26.12.2021.
 //
 
-# include <stdio.h >
-# include <limits.h >
-# include <assert.h >
+# include <stdio.h>
+# include <limits.h>
+# include <assert.h>
 # include "array.h"
 
 void inputArray_(int *const a, const size_t n) {
@@ -129,18 +129,57 @@ size_t binarySearchMoreOrEqual_(const int *a, size_t n, int x) {
     return right;
 }
 
-void swap_(void *a, void *b, size_t n) {
-    if (a == b) {
-        return;
+void swap_(void *a, void *b, size_t size) {
+    char *pa = a;
+    char *pb = b;
+    for (size_t i = 0; i < size; i++) {
+        char t = *pa;
+        *pa = *pb;
+        *pb = t;
+        pa++;
+        pb++;
     }
-    char *x = (char *)a;
-    char *y = (char *)b;
+}
 
-    for (size_t i = 0; i < n; i++) {
-        *x ^= *y;
-        *y ^= *x;
-        *x ^= *y;
-        x++;
-        y++;
+void swap(int *a, int *b) {
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+int isUnique(const long long *a, int n) {
+    int isUnique = 1;
+    for (int i = 0; i < n; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            if (a[i] == a[j])
+                isUnique = 0;
+        }
     }
+    return isUnique;
+}
+
+long long getSum(const int *a, int n) {
+    long long sum = 0;
+    for (int i = 0; i < n; ++i) {
+        sum += a[i];
+    }
+    return sum;
+}
+
+int getMax(const int *a, int size) {
+    int max = a[0];
+    for (int i = 0; i < size; ++i) {
+        if (a[i] > max)
+            max = a[i];
+    }
+    return max;
+}
+
+int getMin(const int *a, int size) {
+    int min = a[0];
+    for (int i = 0; i < size; ++i) {
+        if (a[i] < min)
+            min = a[i];
+    }
+    return min;
 }

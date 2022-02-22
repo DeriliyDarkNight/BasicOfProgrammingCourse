@@ -6,17 +6,57 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.c
-vector.h
-C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
+stddef.h
+-
 
-C:/Users/DeriliyDarkNight/test/Git project/untitled6/libs/data_structures/vector/vector.h
-stdlib.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.c
+matrix.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
+malloc.h
+-
+../../algorithms/array/array.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
+stdbool.h
+-
+assert.h
 -
 stdio.h
 -
-malloc.h
+memory.h
 -
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
 stdbool.h
 -
+stddef.h
+-
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/unordered_array_set/unordered_array_set.c
+assert.h
+-
+malloc.h
+-
+stdlib.h
+-
+string.h
+-
+../../algorithms/array/array.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
+unordered_array_set.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/unordered_array_set/unordered_array_set.h
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/unordered_array_set/unordered_array_set.h
+stdint.h 
+-
+assert.h 
+-
+memory.h 
+-
+stdio.h 
+-
+stdbool.h 
+-
+../../algorithms/array/array.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
 

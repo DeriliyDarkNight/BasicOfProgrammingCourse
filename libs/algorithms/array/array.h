@@ -65,6 +65,16 @@ int countIf_(const int *a, size_t n, int (*predicate )(int));
 // массива
 void deleteIf_(int *a, size_t *n, int (*deletePredicate )(int));
 
-void swap_(void *a, void *b, size_t n);
+void swap_(void *a, void *b, size_t size);
+
+void swap(int *a, int *b);
+
+int isUnique(const long long *a, int n);
+
+long long getSum(const int *a, int n);
+
+int getMax(const int *a, int size);
+
+int getMin(const int *a, int size);
 
 #endif //UNTITLED6_ARRAY_H

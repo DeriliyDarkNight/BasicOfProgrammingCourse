@@ -170,6 +170,12 @@
 		<Unit filename="C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.c">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.h">
+			<Option target="algorithms"/>
+		</Unit>
 		<Unit filename="C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/unordered_array_set/unordered_array_set.c">
 			<Option target="data_structures"/>
 		</Unit>

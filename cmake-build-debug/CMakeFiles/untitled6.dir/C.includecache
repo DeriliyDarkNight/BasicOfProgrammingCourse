@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
+stdbool.h
+-
+stddef.h
+-
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.h
+matrix.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
+
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/main.c
+libs/data_structures/matrix/matrix.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
+assert.h
+-
+iso646.h
+-
+libs/data_structures/matrix/tascs_lab5B.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.h
+
