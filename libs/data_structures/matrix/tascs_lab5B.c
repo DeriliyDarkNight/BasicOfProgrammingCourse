@@ -171,3 +171,11 @@ int getNSpecialElement(matrix m) {
     return nSpecialElements;
 }
 
+void swapPenultimateRow(matrix m) {
+    position minPos = getMinValuePos(m);
+    int colWithMin[m.nRows];
+    getRowFromColumn(m, minPos.colIndex, colWithMin);
+    for (int i = 0; i < m.nRows; ++i) {
+        m.values[m.nRows - 2][i] = colWithMin[i];
+    }
+}
