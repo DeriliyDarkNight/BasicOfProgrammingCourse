@@ -161,3 +161,13 @@ int countEqClassesByRowsSum(matrix m) {
     return nClasses;
 }
 
+int getNSpecialElement(matrix m) {
+    int nSpecialElements = 0;
+    for (int i = 0; i < m.nRows; ++i) {
+        long long rowSum = getSum(m.values[i], m.nCols);
+        long long max = getMax(m.values[i], m.nCols);
+        nSpecialElements += rowSum - max < max;
+    }
+    return nSpecialElements;
+}
+
