@@ -77,4 +77,22 @@ int countZeroRows(matrix m);
 // выводит на экран матрицы из массива матриц ms размера nMatrix с наибольшим количеством нулей
 void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
 
+// обменивает местами строки с наибольшим и наименьшим элементами матрицы m
+void swapRowsWithMinAndMax(matrix m);
+
+// возвращает значение отрицательное значение максимального элемента массива a размера n
+int getMaxNegative(const int *a, int n);
+
+// возвращает отрицательное значение значение минимального элемента массива a размера n
+int getMinNegative(const int *a, int n);
+
+// возвращает число из массива a размера size с наибольшим расстоянием до ноля на числовой прямой
+int getMaxAbsoluteOfArray(int *a, int size);
+
+// возвращает елемент матрицы m с с наибольшим расстоянием до ноля на числовой прямой
+int getMaxAbsoluteOfMatrix(matrix m);
+
+// выводит на экран матрицы с минимальными абсолютными нормами
+void printMatricesWithMinOfMaxOfAbsolute(matrix *ms, int size);
+
 #endif //MAIN_C_TASCS_LAB5B_H

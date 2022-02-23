@@ -237,3 +237,63 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix){
             outputMatrix(ms[i]);
     }
 }
+
+void swapRowsWithMinAndMax(matrix m) {
+    position minPos = getMinValuePos(m);
+    position maxPos = getMaxValuePos(m);
+    swapRows(m, maxPos.rowIndex, minPos.rowIndex);
+}
+
+int getMaxNegative(const int *a, int n) {
+    int max = a[0];
+    for (int i = 0; i < n; ++i) {
+        if (a[i] > max)
+            max = a[i];
+    }
+
+    return -max;
+}
+
+int getMinNegative(const int *a, int n) {
+    int min = a[0];
+    for (int i = 0; i < n; ++i) {
+        if (a[i] < min)
+            min = a[i];
+    }
+
+    return -min;
+}
+
+int getMaxAbsoluteOfArray(int *a, int size){
+    int absoluteMax = abs(a[0]);
+    for (int i = 0; i < size; ++i) {
+        int absolute  = abs(a[i]);
+        if (absolute > absoluteMax)
+            absoluteMax = absolute;
+    }
+    return absoluteMax;
+}
+
+int getMaxAbsoluteOfMatrix(matrix m){
+    int absoluteMax = abs(m.values[0][0]);
+    for (int i = 0; i < m.nRows; ++i) {
+        int absolute  = getMaxAbsoluteOfArray(m.values[i], m.nCols);
+        if (absolute > absoluteMax)
+            absoluteMax = absolute;
+    }
+    return absoluteMax;
+}
+
+void printMatricesWithMinOfMaxOfAbsolute(matrix *ms, int size){
+    int absoluteMax[size];
+    for (int matrix = 0; matrix < size; ++matrix) {
+        absoluteMax[matrix] = getMaxAbsoluteOfMatrix(ms[matrix]);
+    }
+
+    int min = getMin(absoluteMax, size);
+
+    for (int i = 0; i < size; ++i) {
+        if (absoluteMax[i] == min)
+            outputMatrix(ms[i]);
+    }
+}
