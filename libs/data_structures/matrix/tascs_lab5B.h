@@ -22,5 +22,11 @@ void transposeIfMatrixHasEqualSumOfRows(matrix m);
 // возвращает значение "истина", если матрицы m1 и m2 являются взаимнообратными
 bool isMutuallyInverseMatrices(matrix m1, matrix m2);
 
+// возвращает сумму максимумов всех псевдодиагонали матрицы m
+long long findSumOfMaxesOfPseudoDiagonal(matrix m);
+
+// возвращает порядковый номер диагонали к которой принадлежит pos-тый элемент матрицы m
+int getDiagonalIndex(position pos, matrix m);
+
 
 #endif //MAIN_C_TASCS_LAB5B_H
