@@ -13,6 +13,8 @@ void sortRowsByMaxElement(matrix m);
 // сортирует столбцы матрицы m по неубыванию наименьших элементов столбцов
 void sortColsByMinElement(matrix m);
 
+// если матрица m симметричная, то заменяет её квадратом
+void getSquareOfMatrixIfSymmetric(matrix *m);
 
 
 #endif //MAIN_C_TASCS_LAB5B_H
