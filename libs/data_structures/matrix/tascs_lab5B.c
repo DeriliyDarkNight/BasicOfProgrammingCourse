@@ -13,3 +13,7 @@
 void sortRowsByMaxElement(matrix m) {
     selectionSortRowsMatrixByRowCriteria(m, getMax);
 }
+
+void sortColsByMinElement(matrix m) {
+    selectionSortColsMatrixByColCriteria(m, getMin);
+}
