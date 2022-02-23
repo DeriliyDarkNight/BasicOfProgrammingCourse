@@ -5,7 +5,6 @@
 #include "tascs_lab5B.h"
 #include "../../algorithms/array/array.h"
 #include <malloc.h>
-#include <iso646.h>
 #include <math.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -102,7 +101,7 @@ void getArrayFromLeftDiagonal(matrix m, position pos, int *array, size_t *size) 
     *size = 0;
     int x = pos.rowIndex;
     int y = pos.colIndex;
-    while (x >= 0 and y != m.nCols) {
+    while (x >= 0 && y != m.nCols) {
         array[*size] = m.values[x][y];
         *size += 1;
         y++;
@@ -114,7 +113,7 @@ void getArrayFromRightDiagonal(matrix m, position pos, int *array, size_t *size)
     *size = 0;
     int x = pos.rowIndex;
     int y = pos.colIndex;
-    while (x >= 0 and y >= 0) {
+    while (x >= 0 && y >= 0) {
         array[*size] = m.values[x][y];
         *size += 1;
         y--;
@@ -122,3 +121,14 @@ void getArrayFromRightDiagonal(matrix m, position pos, int *array, size_t *size)
     }
 }
 
+float getDistance(int *a, int n) {
+    float sumOfSquares = 0;
+    for (int i = 0; i < n; ++i) {
+        sumOfSquares += powf(a[i], 2);
+    }
+    return sqrtf(sumOfSquares);
+}
+
+void sortByDistances(matrix m) {
+    selectionSortRowsMatrixByRowCriteriaF(m, getDistance);
+}

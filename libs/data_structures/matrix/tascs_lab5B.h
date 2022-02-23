@@ -37,4 +37,10 @@ void getArrayFromRightDiagonal(matrix m, position pos, int *array, size_t *size)
 // возвращает минимальный элемент матрицы m в треугольной области выше максимального элемента
 int getMinInArea(matrix m);
 
+// возвращает расстояние до начала координат от точки с n координатами находящимися в массиве a
+float getDistance(int *a, int n);
+
+// сортирует строки ,содержащие координаты точек, матрицы m по отдалению от начала координат
+void sortByDistances(matrix m);
+
 #endif //MAIN_C_TASCS_LAB5B_H
