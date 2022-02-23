@@ -38,3 +38,12 @@ void getSquareOfMatrixIfSymmetric(matrix *m) {
     }
 }
 
+void transposeIfMatrixHasEqualSumOfRows(matrix m) {
+    long long rowSums[m.nRows];
+    for (int row = 0; row < m.nRows; ++row) {
+        rowSums[row] = getSum(m.values[row], m.nCols);
+    }
+    if (!isUnique(rowSums, m.nRows))
+        transposeSquareMatrix(m);
+}
+
