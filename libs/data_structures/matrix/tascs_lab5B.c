@@ -76,3 +76,49 @@ int getDiagonalIndex(position pos, matrix m) {
     return abs(pos.rowIndex - pos.colIndex - (m.nRows - 1));
 }
 
+int getMinInArea(matrix m) {
+    int diagonal[m.nCols];
+    size_t size = 0;
+    position max = getMaxValuePos(m);
+    int x = max.rowIndex;
+    int y = max.colIndex;
+    int min = getElementByPosition(m, max);
+    while (x != 0) {
+        x--;
+        getArrayFromLeftDiagonal(m, (position) {x, y}, diagonal, &size);
+        int diagonalMin = getMin(diagonal, size);
+        if (diagonalMin < min)
+            min = diagonalMin;
+
+        getArrayFromRightDiagonal(m, (position) {x, y}, diagonal, &size);
+        diagonalMin = getMin(diagonal, size);
+        if (diagonalMin < min)
+            min = diagonalMin;
+    }
+    return min;
+}
+
+void getArrayFromLeftDiagonal(matrix m, position pos, int *array, size_t *size) {
+    *size = 0;
+    int x = pos.rowIndex;
+    int y = pos.colIndex;
+    while (x >= 0 and y != m.nCols) {
+        array[*size] = m.values[x][y];
+        *size += 1;
+        y++;
+        x--;
+    }
+}
+
+void getArrayFromRightDiagonal(matrix m, position pos, int *array, size_t *size) {
+    *size = 0;
+    int x = pos.rowIndex;
+    int y = pos.colIndex;
+    while (x >= 0 and y >= 0) {
+        array[*size] = m.values[x][y];
+        *size += 1;
+        y--;
+        x--;
+    }
+}
+

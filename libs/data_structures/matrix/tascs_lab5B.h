@@ -28,5 +28,13 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m);
 // возвращает порядковый номер диагонали к которой принадлежит pos-тый элемент матрицы m
 int getDiagonalIndex(position pos, matrix m);
 
+// заполняет массив array размера size элементами диагонали начинающейся с pos - того элемента по направлению вверх и влево строки матрицы m;
+void getArrayFromLeftDiagonal(matrix m, position pos, int *array, size_t *size);
+
+// заполняет массив array размера size элементами диагонали начинающейся с pos - того элемента по направлению вверх и вправо  матрицы m;
+void getArrayFromRightDiagonal(matrix m, position pos, int *array, size_t *size);
+
+// возвращает минимальный элемент матрицы m в треугольной области выше максимального элемента
+int getMinInArea(matrix m);
 
 #endif //MAIN_C_TASCS_LAB5B_H
