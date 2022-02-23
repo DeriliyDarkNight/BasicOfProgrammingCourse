@@ -47,3 +47,10 @@ void transposeIfMatrixHasEqualSumOfRows(matrix m) {
         transposeSquareMatrix(m);
 }
 
+bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
+    matrix m3 = mulMatrices(m1, m2);
+    bool res = isEMatrix(m3);
+    freeMemMatrix(m3);
+    return res;
+}
+
