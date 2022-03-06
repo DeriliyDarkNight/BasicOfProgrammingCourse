@@ -35,7 +35,7 @@ char *findNonSpaceReverse(char *rbegin, const char *rend);
 char *findSpaceReverse(char *rbegin, const char *rend);
 
 // возвращает значение истина если строки str1 и str2 равны, иначе "ложь"
-int strcmp_(char *str1, char *str2);
+int strcmp_(const char *str1, const char *str2);
 
 // записывает по адресу beginDestination фрагмент памяти,
 // начиная с адреса beginSource до endSource.
@@ -55,9 +55,6 @@ char *copyIf(char *beginSource, const char *endSource,
 char *copyIfReverse(char *rbeginSource, const char *rendSource,
                     char *beginDestination, int (*f)(int));
 
-// assert модификация
-void assertString(const char *expected, char *got,
-                  char const *fileName, char const *funcName,
-                  int line);
+int isSpaceNoInString(int symbol);
 
 #endif //MAIN_C_STRING__H

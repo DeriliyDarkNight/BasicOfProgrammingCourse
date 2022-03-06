@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.c
-stdio.h
--
-limits.h
--
-assert.h
--
-array.h
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
-
 C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
 stddef.h
 -
@@ -32,8 +22,6 @@ C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structur
 ../../algorithms/array/array.h
 C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
 malloc.h
--
-iso646.h
 -
 math.h
 -

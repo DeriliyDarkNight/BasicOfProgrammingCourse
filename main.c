@@ -30,12 +30,12 @@ void test_findSpace_noSpace() {
 }
 
 void test_findSpace_text() {
-    char string[] = "Want to sleep";
+    char string[] = "Want to go";
     assert(findSpace(string) == string + 4);
 }
 
 void test_findNonSpaceReverse_noSpace() {
-    char string[] = "aofnanfowN";
+    char string[] = "aoaoaoaoN";
     assert(findNonSpaceReverse(string + (strlen_(string) - 1),
                                string) == string + strlen_(string) - 1);
 }
@@ -47,7 +47,7 @@ void test_findNonSpaceReverse_noSymbols() {
 }
 
 void test_findNonSpaceReverse_text() {
-    char string[] = "Hello, bed!";
+    char string[] = "Hello, world!";
     assert(findNonSpaceReverse(string + (strlen_(string) - 1),
                                string) == string + strlen_(string) - 1);
 }
@@ -59,13 +59,13 @@ void test_findSpaceReverse_emptyString() {
 }
 
 void test_findSpaceReverse_text() {
-    char string[] = "I want to eat";
+    char string[] = "I swap to bad";
     assert(findSpaceReverse(string + (strlen_(string) - 1),
                             string) == string + (strlen_(string) - 4));
 }
 
 void test_findSpaceReverse_firstSpace() {
-    char string[] = "Nooooo \n";
+    char string[] = "Yeeees \n";
     assert(findSpaceReverse(string + (strlen_(string) - 1),
                             string) == string + (strlen_(string) - 1));
 }
@@ -74,21 +74,21 @@ void test_strcmp_equalStrings() {
     char string1[] = "Hello, \t world";
     char string2[] = "Hello, \t world";
 
-    assert(strcmp(string1, string2) == 0);
+    assert(strcmp_(string1, string2) == 0);
 }
 
 void test_strcmp_differentStrings() {
     char string1[] = "Hello, \t world";
-    char string2[] = "ksfsafjpj";
+    char string2[] = "aoaoaoaoa";
 
-    assert(strcmp(string1, string2) < 0);
+    assert(strcmp_(string1, string2) < 0);
 }
 
 void test_strcmp_differentString2() {
-    char string1[] = "aaa";
-    char string2[] = "AAA";
+    char string1[] = "ccc";
+    char string2[] = "CCC";
 
-    assert(strcmp(string1, string2) > 0);
+    assert(strcmp_(string1, string2) > 0);
 }
 
 void test_copy_emptyString() {
@@ -97,7 +97,7 @@ void test_copy_emptyString() {
     copy(string, string + strlen_(string) + 1,
          answerString);
 
-    assert(strcmp(string, answerString) == 0);
+    assert(strcmp_(string, answerString) == 0);
 }
 
 void test_copy_text() {
@@ -106,7 +106,7 @@ void test_copy_text() {
     copy(string, string + strlen_(string) + 1,
          answerString);
 
-    assert(strcmp(string, answerString) == 0);
+    assert(strcmp_(string, answerString) == 0);
 }
 
 void test_copyIf_emptyString() {
@@ -114,39 +114,29 @@ void test_copyIf_emptyString() {
     char string2[strlen_(string)];
     char answerString[] = "";
     copyIf(string, string + strlen_(string) + 1,
-           string2, !isspace);
+           string2, isSpaceNoInString);
 
-    assert(strcmp(string2, answerString) == 0);
+    assert(strcmp_(string2, answerString) == 0);
 }
 
-void test_copyIf_text() {
-    char string[] = "Hello, world!";
+void test_copyIf_digit() {
+    char string[] = "12345";
     char string2[strlen_(string)];
-    char answerString[] = "Hello,world!";;
+    char answerString[] = "12345";;
     copyIf(string, string + strlen_(string) + 1,
-           string2, isNonSpace);
+           string2, isdigit);
 
-    assert(strcmp(string2, answerString) == 0);
+    assert(strcmp_(string2, answerString) == 0);
 }
 
-void test_copyIfReverse_emptyString() {
-    char string[0] = "";
-    char string2[strlen_(string)];
-    char answerString[] = "";
-    copyIfReverse(string + strlen_(string) + 1, string,
-                  string2, isNonSpace);
-
-    assert(strcmp(string2, answerString) == 0);
-}
-
-void test_copyIfReverse_text() {
-    char string[] = "hello";
+void test_copyIfReverse_digit() {
+    char string[] = "12345";
     char string2[strlen_(string)];
     copyIfReverse(string + strlen_(string) - 1, string - 1,
-                  string2, isNonSpace);
-    char answerString[] = "olleh";
+                  string2, isdigit);
+    char answerString[] = "54321";
 
-    assert(strcmp(string2, answerString) == 0);
+    assert(strcmp_(string2, answerString) == 0);
 }
 
 void test_findNonSpace() {
@@ -186,12 +176,11 @@ void test_copy() {
 
 void test_copyIf() {
     test_copyIf_emptyString();
-    test_copyIf_text();
+    test_copyIf_digit();
 }
 
 void test_copyIfReverse() {
-    test_copyIfReverse_emptyString();
-    test_copyIfReverse_text();
+    test_copyIfReverse_digit();
 }
 
 void tests() {
