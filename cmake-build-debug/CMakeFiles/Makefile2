@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled
 
 # The main recursive "all" target.
 all: CMakeFiles/untitled6.dir/all
+all: CMakeFiles/str.dir/all
 all: libs/all
 
 .PHONY : all
@@ -84,6 +85,7 @@ preinstall: libs/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/untitled6.dir/clean
+clean: CMakeFiles/str.dir/clean
 clean: libs/clean
 
 .PHONY : clean
@@ -149,16 +151,17 @@ libs/data_structures/clean: libs/data_structures/CMakeFiles/data_structures.dir/
 # Target rules for target CMakeFiles/untitled6.dir
 
 # All Build rule for target.
+CMakeFiles/untitled6.dir/all: CMakeFiles/str.dir/all
 CMakeFiles/untitled6.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
 CMakeFiles/untitled6.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" --progress-num=10,11 "Built target untitled6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" --progress-num=12,13,14 "Built target untitled6"
 .PHONY : CMakeFiles/untitled6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/untitled6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/untitled6.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/untitled6.dir/rule
@@ -172,6 +175,33 @@ untitled6: CMakeFiles/untitled6.dir/rule
 CMakeFiles/untitled6.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/clean
 .PHONY : CMakeFiles/untitled6.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/str.dir
+
+# All Build rule for target.
+CMakeFiles/str.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" --progress-num=10,11 "Built target str"
+.PHONY : CMakeFiles/str.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/str.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/str.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\DeriliyDarkNight\test\Git project timeplay\untitled6\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/str.dir/rule
+
+# Convenience name for target.
+str: CMakeFiles/str.dir/rule
+
+.PHONY : str
+
+# clean rule for target.
+CMakeFiles/str.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/clean
+.PHONY : CMakeFiles/str.dir/clean
 
 #=============================================================================
 # Target rules for target libs/data_structures/CMakeFiles/data_structures.dir

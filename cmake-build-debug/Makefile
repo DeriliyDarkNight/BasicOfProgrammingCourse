@@ -143,6 +143,19 @@ untitled6/fast:
 .PHONY : untitled6/fast
 
 #=============================================================================
+# Target rules for targets named str
+
+# Build rule for target.
+str: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 str
+.PHONY : str
+
+# fast build rule for target.
+str/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/build
+.PHONY : str/fast
+
+#=============================================================================
 # Target rules for targets named data_structures
 
 # Build rule for target.
@@ -167,6 +180,36 @@ algorithms: cmake_check_build_system
 algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
+
+libs/string/string_.obj: libs/string/string_.c.obj
+
+.PHONY : libs/string/string_.obj
+
+# target to build an object file
+libs/string/string_.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/libs/string/string_.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/libs/string/string_.c.obj
+.PHONY : libs/string/string_.c.obj
+
+libs/string/string_.i: libs/string/string_.c.i
+
+.PHONY : libs/string/string_.i
+
+# target to preprocess a source file
+libs/string/string_.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/libs/string/string_.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/libs/string/string_.c.i
+.PHONY : libs/string/string_.c.i
+
+libs/string/string_.s: libs/string/string_.c.s
+
+.PHONY : libs/string/string_.s
+
+# target to generate assembly for a file
+libs/string/string_.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/libs/string/string_.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\str.dir\build.make CMakeFiles/str.dir/libs/string/string_.c.s
+.PHONY : libs/string/string_.c.s
 
 main.obj: main.c.obj
 
@@ -205,7 +248,11 @@ help:
 	@echo ... rebuild_cache
 	@echo ... algorithms
 	@echo ... data_structures
+	@echo ... str
 	@echo ... untitled6
+	@echo ... libs/string/string_.obj
+	@echo ... libs/string/string_.i
+	@echo ... libs/string/string_.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

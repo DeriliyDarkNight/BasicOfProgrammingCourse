@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/untitled6.dir/libs/string/string_.c.obj"
   "CMakeFiles/untitled6.dir/main.c.obj"
   "libuntitled6.dll.a"
   "untitled6.exe"
