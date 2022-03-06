@@ -3,6 +3,9 @@
 //
 
 #include <stdlib.h>
+#include <ctype.h>
+#include <memory.h>
+#include <stdbool.h>
 
 #ifndef MAIN_C_STRING__H
 #define MAIN_C_STRING__H
@@ -56,12 +59,5 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
 void assertString(const char *expected, char *got,
                   char const *fileName, char const *funcName,
                   int line);
-
-// tasck1 удалить из строки все пробельные символы
-void removeNonLetters(char *s);
-
-char *getEndOfString(char *begin);
-
-
 
 #endif //MAIN_C_STRING__H
