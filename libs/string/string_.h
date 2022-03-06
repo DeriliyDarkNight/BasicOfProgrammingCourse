@@ -37,20 +37,31 @@ int strcmp_(char *str1, char *str2);
 // записывает по адресу beginDestination фрагмент памяти,
 // начиная с адреса beginSource до endSource.
 // Возвращает указатель на следующий свободный фрагмент памяти в destination
-char* copy(const char *beginSource, const char *endSource,
+char *copy(const char *beginSource, const char *endSource,
            char *beginDestination);
 
 // записывает по адресу beginDestination элементы из фрагмента памяти начиная с beginSource
 // заканчивая endSource, удовлетворяющие функции-предикату f. Функция возвращает указатель на
 // следующий свободный для записи фрагмент в памяти
-char* copyIf(char *beginSource, const char *endSource,
+char *copyIf(char *beginSource, const char *endSource,
              char *beginDestination, int (*f)(int));
 
 // записывает по адресу beginDestination элементы из фрагмента памяти начиная с rbeginSource
 // заканчивая rendSource, удовлетворяющие функции-предикату f. Функция возвращает
 // значение beginDestination по окончанию работы функции
-char* copyIfReverse(char *rbeginSource, const char *rendSource,
+char *copyIfReverse(char *rbeginSource, const char *rendSource,
                     char *beginDestination, int (*f)(int));
+
+// assert модификация
+void assertString(const char *expected, char *got,
+                  char const *fileName, char const *funcName,
+                  int line);
+
+// tasck1 удалить из строки все пробельные символы
+void removeNonLetters(char *s);
+
+char *getEndOfString(char *begin);
+
 
 
 #endif //MAIN_C_STRING__H
