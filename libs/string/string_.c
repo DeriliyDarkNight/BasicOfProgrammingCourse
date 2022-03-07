@@ -63,6 +63,15 @@ char *copy(const char *beginSource, const char *endSource, char *beginDestinatio
     return beginDestination + distance;
 }
 
+char *copyReverse(char *rbeginSource, const char *rendSource,
+                  char *beginDestination) {
+    while (rbeginSource != rendSource) {
+        *beginDestination++ = *rbeginSource;
+        rbeginSource--;
+    }
+    return beginDestination;
+}
+
 char *copyIf(char *beginSource, const char *endSource,
              char *beginDestination, int (*f)(int)) {
     while (beginSource < endSource) {
@@ -130,4 +139,14 @@ int areWordsEqual(WordDescriptor w1, WordDescriptor w2) {
         begin1++, begin2++;
 
     return *begin1 - *begin2;
+}
+
+void getBagOfWords(BagOfWords *bag, char *s) {
+    bag->size = 0;
+    WordDescriptor word;
+    while (getWord(s, &word)) {
+        bag->words[bag->size] = word;
+        bag->size++;
+        s = word.end;
+    }
 }

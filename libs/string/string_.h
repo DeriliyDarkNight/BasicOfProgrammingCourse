@@ -46,6 +46,12 @@ int strcmp_(const char *str1, const char *str2);
 char *copy(const char *beginSource, const char *endSource,
            char *beginDestination);
 
+// записывает по адресу rbeginDestination фрагмент памяти,
+// начиная с адреса beginSource до rendSource.
+// Возвращает указатель на следующий свободный фрагмент памяти в destination
+char *copyReverse(char *rbeginSource, const char *rendSource,
+                  char *beginDestination);
+
 // записывает по адресу beginDestination элементы из фрагмента памяти начиная с beginSource
 // заканчивая endSource, удовлетворяющие функции-предикату f. Функция возвращает указатель на
 // следующий свободный для записи фрагмент в памяти
@@ -89,5 +95,15 @@ bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
 
 //
 int areWordsEqual(WordDescriptor w1, WordDescriptor w2);
+
+typedef struct BagOfWords {
+    WordDescriptor words[MAX_N_WORDS_IN_STRING];
+    size_t size;
+} BagOfWords;
+
+BagOfWords _bag;
+BagOfWords _bag2;
+
+void getBagOfWords(BagOfWords *bag, char *s);
 
 #endif //MAIN_C_STRING__H
