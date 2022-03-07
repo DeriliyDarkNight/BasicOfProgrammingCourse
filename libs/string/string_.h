@@ -81,6 +81,9 @@ typedef struct WordDescriptor {
 // будут записаны позиции начала слова, и первого символа после конца слова
 int getWord(char *beginSearch, WordDescriptor *word);
 
+// функция getWord вернёт значение 0, если слово не было считано с конца строки, в противном
+// случае будет возвращено значение 1 и в переменную word типа WordDescriptor
+// будут записаны позиции начала слова, и первого символа после конца слова
 bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
 
 #endif //MAIN_C_STRING__H
