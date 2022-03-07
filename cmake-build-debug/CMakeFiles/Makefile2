@@ -151,8 +151,8 @@ libs/data_structures/clean: libs/data_structures/CMakeFiles/data_structures.dir/
 # Target rules for target CMakeFiles/untitled6.dir
 
 # All Build rule for target.
-CMakeFiles/untitled6.dir/all: CMakeFiles/str.dir/all
 CMakeFiles/untitled6.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
+CMakeFiles/untitled6.dir/all: CMakeFiles/str.dir/all
 CMakeFiles/untitled6.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled6.dir\build.make CMakeFiles/untitled6.dir/build

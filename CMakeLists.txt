@@ -14,7 +14,7 @@ add_library(str libs/string/string_.h libs/string/string_.c
          # ...
          # string / tasks / hasPairOfWordsWithEqualLetterSet . h
          # string / tasks / printWordsNonEqualLastWord . h
-        )
+        libs/string/tasck/tascs1.h)
 
 # описываем, что для запуска project потребуется сборка tasks
 target_link_libraries (untitled6 str)

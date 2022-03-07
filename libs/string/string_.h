@@ -2,10 +2,12 @@
 // Created by DeriliyDarkNight on 06.03.2022.
 //
 
+#include "../algorithms/algorithms.h"
 #include <stdlib.h>
 #include <ctype.h>
 #include <memory.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #ifndef MAIN_C_STRING__H
 #define MAIN_C_STRING__H
@@ -56,5 +58,17 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
                     char *beginDestination, int (*f)(int));
 
 int isSpaceNoInString(int symbol);
+
+#define ASSERT_STRING(expected, got) assertString(expected, got, \
+__FILE__ , __FUNCTION__ , __LINE__ )
+
+#define MAX_STRING_SIZE 100
+# define MAX_N_WORDS_IN_STRING 100
+# define MAX_WORD_SIZE 20
+char stringBuffer[MAX_STRING_SIZE + 1];
+
+void assertString(const char *expected, char *got,
+                  char const *fileName, char const *funcName,
+                  int line);
 
 #endif //MAIN_C_STRING__H
