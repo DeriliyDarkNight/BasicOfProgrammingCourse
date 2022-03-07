@@ -8,6 +8,7 @@
 #include <memory.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <assert.h>
 
 #ifndef MAIN_C_STRING__H
 #define MAIN_C_STRING__H
@@ -85,5 +86,8 @@ int getWord(char *beginSearch, WordDescriptor *word);
 // случае будет возвращено значение 1 и в переменную word типа WordDescriptor
 // будут записаны позиции начала слова, и первого символа после конца слова
 bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
+
+//
+int areWordsEqual(WordDescriptor w1, WordDescriptor w2);
 
 #endif //MAIN_C_STRING__H
