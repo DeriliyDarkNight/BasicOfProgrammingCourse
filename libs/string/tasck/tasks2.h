@@ -7,6 +7,8 @@
 
 #include "../string_.h"
 
+//task2 Сократить количество пробелов между словами данного предложения до
+//одного
 void removeExtraSpaces(char *s) {
     char *begin = s;
     char *dst = begin;
