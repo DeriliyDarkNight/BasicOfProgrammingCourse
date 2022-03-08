@@ -8,29 +8,6 @@
 #include "../string_.h"
 
 // task5 Заменить все вхождения слова 𝑤1 на слово 𝑤2
-bool comparisonWords(char *string, char *word) {
-    char *copyString = string;
-    char *copyWord = word;
-    while (*copyString != ' ' && *copyString != '\0') {
-        if (*copyString != *copyWord)
-            return false;
-        copyString++;
-        copyWord++;
-    }
-    return true;
-}
-
-void replacesWord(char *source, WordDescriptor word1, WordDescriptor word2, size_t w2Size) {
-    while (w2Size != 0) {
-        *source = *word2.begin;
-        w2Size--;
-    }
-    while (word1.end - 1 - word2.begin != 0) {
-        *source = ' ';
-        word2.begin++;
-    }
-}
-
 void replace(char *source, char *w1, char *w2) {
     size_t w1Size = strlen_(w1);
     size_t w2Size = strlen_(w2);
@@ -46,9 +23,58 @@ void replace(char *source, char *w1, char *w2) {
         readPtr = stringBuffer;
         recPtr = source;
     }
-    if (comparisonWords(readPtr, w1)) {
-        replacesWord(recPtr, word1, word2, w2Size);
+
+    WordDescriptor curWord;
+    while (getWord(readPtr, &curWord)) {
+        recPtr = copy(readPtr, curWord.begin, recPtr);
+        if (areWordsEqual(curWord, word1) == 0) {
+            recPtr = copy(word2.begin, word2.end, recPtr);
+        } else {
+            recPtr = copy(curWord.begin, curWord.end, recPtr);
+        }
+        readPtr = curWord.end;
     }
+
+    *recPtr = '\0';
+}
+
+void test_replace_emptyString1() {
+    char s[MAX_STRING_SIZE] = "";
+    char *word1 = "";
+    char *word2 = "";
+    replace(s, word1, word2);
+    ASSERT_STRING("", s);
+}
+
+void test_replace_emptyString2() {
+    char s[MAX_STRING_SIZE] = "";
+    char *word1 = "eee";
+    char *word2 = "www";
+    replace(s, word1, word2);
+    ASSERT_STRING("", s);
+}
+
+void test_replace_firstWordReplace() {
+    char s[MAX_STRING_SIZE] = "ww wer ww";
+    char *word1 = "ww";
+    char *word2 = "wer";
+    replace(s, word1, word2);
+    ASSERT_STRING("wer wer wer", s);
+}
+
+void test_replace_notReplaceWordFromString() {
+    char s[MAX_STRING_SIZE] = "hello world hello";
+    char *word1 = "aaa";
+    char *word2 = "bye";
+    replace(s, word1, word2);
+    ASSERT_STRING("hello world hello", s);
+}
+
+void test_replace() {
+    test_replace_emptyString1();
+    test_replace_emptyString2();
+    test_replace_firstWordReplace();
+    test_replace_notReplaceWordFromString();
 }
 
 #endif //MAIN_C_TASK5_H

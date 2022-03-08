@@ -6,31 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
-stddef.h
--
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/algorithms.c
+algorithms.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/algorithms.h
 
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/algorithms.h
+stdio.h
+-
 stdbool.h
 -
-stddef.h
--
-
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.c
-tascs_lab5B.h
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.h
-../../algorithms/array/array.h
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/array/array.h
-malloc.h
--
-math.h
--
-stdint.h
--
-stdlib.h
--
-
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/tascs_lab5B.h
-matrix.h
-C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/data_structures/matrix/matrix.h
 

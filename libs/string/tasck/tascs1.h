@@ -15,7 +15,7 @@ void removeNonLetters(char *s) {
 }
 
 void test_removeNonLetters_spaceBetween() {
-    char s[] = " n o 3 3 3 n o ";
+    char s[] = " n o 3 3 3 n o";
     removeNonLetters(s);
     ASSERT_STRING("no333no", s);
 }
@@ -32,7 +32,7 @@ void test_removeNonLetters_allSpaces() {
     ASSERT_STRING("", s);
 }
 
-void test_removeNonLetters_task1() {
+void test_removeNonLetters() {
     test_removeNonLetters_spaceBetween();
     test_removeNonLetters_noSpaces();
     test_removeNonLetters_allSpaces();

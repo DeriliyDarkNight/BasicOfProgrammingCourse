@@ -58,18 +58,18 @@ void test_alternatingWordsInString_twoStrings() {
     ASSERT_STRING("magick woodoo magick woodoo", alternatingWordsInString(s1, s2, s3));
 }
 
-void test_alternatingWordsInString_manySpaseInTwoString() {
+void test_alternatingWordsInString_manySpaceInTwoString() {
     char s1[] = "  ";
     char s2[] = "  ";
     char s3[MAX_STRING_SIZE];
     ASSERT_STRING("", alternatingWordsInString(s1, s2, s3));
 }
 
-void test_alternatingWords_task9() {
+void test_alternatingWordsInString() {
     test_alternatingWordsInString_emptyString();
     test_alternatingWordsInString_oneEmptyString();
     test_alternatingWordsInString_twoStrings();
-    test_alternatingWordsInString_manySpaseInTwoString();
+    test_alternatingWordsInString_manySpaceInTwoString();
 }
 
 #endif //MAIN_C_TASK9_H

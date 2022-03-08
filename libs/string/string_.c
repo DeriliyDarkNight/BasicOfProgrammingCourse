@@ -74,16 +74,14 @@ char *copyReverse(char *rbeginSource, const char *rendSource,
 
 char *copyIf(char *beginSource, const char *endSource,
              char *beginDestination, int (*f)(int)) {
-    while (beginSource < endSource) {
+    while (beginSource != endSource) {
         if (f(*beginSource)) {
             *beginDestination = *beginSource;
             beginDestination++;
         }
-
         beginSource++;
     }
-
-    return beginDestination + 1;
+    return beginDestination;
 }
 
 char *copyIfReverse(char *rbeginSource, const char *rendSource,
@@ -149,4 +147,8 @@ void getBagOfWords(BagOfWords *bag, char *s) {
         bag->size++;
         s = word.end;
     }
+}
+
+void wordDescriptorToString(WordDescriptor word, char *destination) {
+    *copy(word.begin, word.end, destination) = '\0';
 }

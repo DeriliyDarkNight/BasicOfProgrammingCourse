@@ -24,37 +24,31 @@ bool areWordsOrdered(char *string) {
         return true;
 }
 
-void test_areWordsOrdered_stringIsEmpty() {
+void test_areWordsOrdered_emptyString() {
     char s[] = "";
     assert(areWordsOrdered(s) == true);
 }
 
 void test_areWordsOrdered_oneWord() {
-    char s[] = "please";
+    char s[] = "search";
     assert(areWordsOrdered(s) == true);
 }
 
-void test_areWordsOrdered_NotOrderedString() {
-    char s[] = "false op";
+void test_areWordsOrdered_notOrderedString() {
+    char s[] = "search me";
     assert(areWordsOrdered(s) == false);
 }
 
-void test_areWordsOrdered_TwoWords() {
-    char s[] = "false false";
+void test_areWordsOrdered_twoWord() {
+    char s[] = "search search";
     assert(areWordsOrdered(s) == true);
 }
 
-void test_areWordsOrdered_orderedString() {
-    char s[] = "c cc ccc ca cc";
-    assert(areWordsOrdered(s) == true);
-}
-
-void test_areWordsOrdered_task6() {
-    test_areWordsOrdered_stringIsEmpty();
+void test_areWordsOrdered() {
+    test_areWordsOrdered_emptyString();
     test_areWordsOrdered_oneWord();
-    test_areWordsOrdered_NotOrderedString();
-    test_areWordsOrdered_TwoWords();
-    test_areWordsOrdered_orderedString();
+    test_areWordsOrdered_notOrderedString();
+    test_areWordsOrdered_twoWord();
 }
 
 #endif //MAIN_C_TASK6_H

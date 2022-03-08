@@ -106,4 +106,6 @@ BagOfWords _bag2;
 
 void getBagOfWords(BagOfWords *bag, char *s);
 
+void wordDescriptorToString(WordDescriptor word, char *destination);
+
 #endif //MAIN_C_STRING__H

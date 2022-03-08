@@ -51,7 +51,7 @@ void test_replacesNumbersWithSpaces_lettersAndDigits() {
     ASSERT_STRING("re  te ", s);
 }
 
-void test_replacesNumbersWithSpaces_task4() {
+void test_replacesNumbersWithSpaces() {
     test_replacesNumbersWithSpaces_emptyString();
     test_replacesNumbersWithSpaces_letter();
     test_replacesNumbersWithSpaces_digits();

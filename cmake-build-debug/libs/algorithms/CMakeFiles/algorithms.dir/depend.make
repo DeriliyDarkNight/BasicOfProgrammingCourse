@@ -7,6 +7,7 @@ libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/tascs_lab5B.
 libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/tascs_lab5B.c.obj: ../libs/data_structures/matrix/tascs_lab5B.h
 
 libs/algorithms/CMakeFiles/algorithms.dir/algorithms.c.obj: ../libs/algorithms/algorithms.c
+libs/algorithms/CMakeFiles/algorithms.dir/algorithms.c.obj: ../libs/algorithms/algorithms.h
 
 libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj: ../libs/algorithms/array/array.c
 libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj: ../libs/algorithms/array/array.h

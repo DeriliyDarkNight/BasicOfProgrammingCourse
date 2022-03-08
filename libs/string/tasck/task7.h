@@ -18,7 +18,7 @@ void printReverse(char *s) {
     }
 }
 
-void test_task7() {
+void test_printReverse() {
     char s[] = "hello word!";
     printReverse(s);
 }

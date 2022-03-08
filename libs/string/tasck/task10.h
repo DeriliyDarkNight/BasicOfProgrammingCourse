@@ -45,7 +45,7 @@ void test_reverseWord_manyWords() {
     ASSERT_STRING("JoJo is name my", s);
 }
 
-void test_task10() {
+void test_reverseWord() {
     test_reverseWord_emptyString();
     test_reverseWord_oneWord();
     test_reverseWord_twoWords();

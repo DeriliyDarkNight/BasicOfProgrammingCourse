@@ -44,7 +44,7 @@ void test_removeExtraSpaces_emptyString() {
     ASSERT_STRING("", s);
 }
 
-void test_removeExtraSpaces_task2() {
+void test_removeExtraSpaces() {
     test_removeExtraSpaces_();
     test_removeExtraSpaces_allSpace();
     test_removeExtraSpaces_emptyString();

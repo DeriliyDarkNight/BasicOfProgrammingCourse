@@ -35,28 +35,28 @@ void test_digitToStartString_emptyString() {
 }
 
 void test_digitToStartString_digitAndWord() {
-    char s[MAX_STRING_SIZE] = "rer332233";
+    char s[MAX_STRING_SIZE] = "te212";
     digitToStartString(s);
-    ASSERT_STRING("332233rer", s);
+    ASSERT_STRING("212te", s);
 }
 
 void test_digitToStartString_twoDigitAndTwoWord() {
-    char s[MAX_STRING_SIZE] = "rer33 fer22";
+    char s[MAX_STRING_SIZE] = "te212 et121";
     digitToStartString(s);
-    ASSERT_STRING("33rer 22fer", s);
+    ASSERT_STRING("212te 121et", s);
 }
 
-void test_digitToStartString_digitStartAndEndWord() {
-    char s[MAX_STRING_SIZE] = "rer33 2fer2";
+void test_digitToStartString_digitAndSpaceWord() {
+    char s[MAX_STRING_SIZE] = "212 te";
     digitToStartString(s);
-    ASSERT_STRING("33rer 22fer", s);
+    ASSERT_STRING("212 te", s);
 }
 
-void test_digitToStartString_task3() {
+void test_digitToStartString() {
     test_digitToStartString_emptyString();
     test_digitToStartString_digitAndWord();
     test_digitToStartString_twoDigitAndTwoWord();
-    test_digitToStartString_digitStartAndEndWord();
+    test_digitToStartString_digitAndSpaceWord();
 }
 
 #endif //MAIN_C_TASKS3_H

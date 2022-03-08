@@ -1,8 +1,17 @@
-#include <stdio.h>
-#include <string.h>
 #include <assert.h>
 #include <ctype.h>
 #include "libs/string/string_.h"
+#include "libs/string/tasck/tascs1.h"
+#include "libs/string/tasck/tasks2.h"
+#include "libs/string/tasck/tasks3.h"
+#include "libs/string/tasck/task4.h"
+#include "libs/string/tasck/task5.h"
+#include "libs/string/tasck/task6.h"
+#include "libs/string/tasck/task8.h"
+#include "libs/string/tasck/task9.h"
+#include "libs/string/tasck/task10.h"
+#include "libs/string/tasck/task11.h"
+#include "libs/string/tasck/task12.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -183,7 +192,7 @@ void test_copyIfReverse() {
     test_copyIfReverse_digit();
 }
 
-void tests() {
+void tests_library_string() {
     test_findNonSpaceReverse();
     test_findSpaceReverse();
     test_copyIfReverse();
@@ -192,6 +201,25 @@ void tests() {
     test_strcmp();
     test_copyIf();
     test_copy();
+}
+
+void tests_tasks() {
+    test_removeNonLetters();
+    test_removeExtraSpaces();
+    test_digitToStartString();
+    test_replacesNumbersWithSpaces();
+    test_replace();
+    test_areWordsOrdered();
+    test_countWordsPalindromes();
+    test_alternatingWordsInString();
+    test_reverseWord();
+    testAll_getWordBeforeFirstWordWithA();
+    test_lastWordInFirstStringIsInSecondString();
+}
+
+void tests() {
+    tests_library_string();
+    tests_tasks();
 }
 
 int main() {

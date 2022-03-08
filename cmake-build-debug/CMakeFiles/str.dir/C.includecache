@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/algorithms.h
+stdio.h
+-
+stdbool.h
+-
+
 C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/string/string_.c
 string_.h
 C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/string/string_.h
 
 C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/string/string_.h
+../algorithms/algorithms.h
+C:/Users/DeriliyDarkNight/test/Git project timeplay/untitled6/libs/algorithms/algorithms.h
 stdlib.h
 -
 ctype.h
@@ -18,5 +26,9 @@ ctype.h
 memory.h
 -
 stdbool.h
+-
+stdio.h
+-
+assert.h
 -
 

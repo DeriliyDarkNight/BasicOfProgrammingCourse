@@ -68,7 +68,7 @@ void test_countWordsPalindromes_oneSymbol() {
     assert(countWordsPalindromes(s) == 1);
 }
 
-void test_howManyWordsPalindromes_task8() {
+void test_countWordsPalindromes() {
     test_countWordsPalindromes_emptyString();
     test_countWordsPalindromes_onePalindrome();
     test_countWordsPalindromes_twoPalindrome();
