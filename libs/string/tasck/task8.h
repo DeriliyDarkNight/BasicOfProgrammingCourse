@@ -7,6 +7,8 @@
 
 #include "../string_.h"
 
+// task8 В данной строке соседние слова разделены запятыми. Определить количество
+//слов-палиндромов
 bool isPalindrome(char *begin, char *end) {
     end--;
     while (end - begin > 0) {
